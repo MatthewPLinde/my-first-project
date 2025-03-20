@@ -1,0 +1,361 @@
+/*COLOURS*/
+/*Background: 00171f*/
+/*Text:       ffffff*/
+/*...:        003459*/
+/*...:        007ea7*/
+/*...:        00a8e8*/
+
+
+
+
+
+@font-face{
+	font-family: myFirstFont;
+	src: url(Floridin/Floridin.otf) format('opentype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+body{
+	margin: 0;
+	background-color: #00171f;
+	color: #ffffff;
+	font-family: 'myFirstFont', sans-serif; /* Apply custom font */
+}
+
+#main-headers{
+	margin-top: 20px;
+}
+
+section {
+    margin: 0; /* Remove default margins */
+    padding: 50px 5%; /* Add consistent padding */
+}
+
+#main-headers {
+    margin: 0 0 20px 0; /* Top and bottom margins only */
+}
+
+
+
+
+/*NAV-BAR*/
+nav.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #00171f;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; /* Add padding: 0 to remove any default padding */
+    display: flex; /* Ensure the list items are displayed in a row */
+    overflow: hidden;
+}
+
+li {
+    padding: 10px;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #007ea7;
+    transition: 0.4s ease;
+    transform: scale(1.2);
+}
+
+
+
+
+/*ABOUT*/
+section.about {
+    background: linear-gradient(135deg, #003459, #005f7f);
+    color: #ffffff;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; 
+}
+
+.about-text {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    margin-left: 0; /* Remove the margin to ensure alignment */
+}
+
+.about-text h1 {
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    margin-top: 0;
+}
+
+
+/* SLIDESHOW STYLES */
+.about-images {
+    position: relative;
+    width: 300px; /* Same width as your current about image */
+    height: 300px; /* Explicit height to keep the container visible */
+    margin-left: 300px; /* Keeps your current positioning */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: fade 12s infinite;
+}
+
+/* Adjust the delay for each slide to control display duration */
+.slide-image:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide-image:nth-child(2) {
+    animation-delay: 4s;
+}
+.slide-image:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* Keyframes for fading effect */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    8.33% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+/*EDUCATION*/
+.education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Adjust spacing between boxes */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Center the heading */
+    background: linear-gradient(135deg, #00263b, #00496a);
+}
+
+.education h1 {
+    grid-column: span 2; /* Make the heading span both columns */
+    margin: 0; /* Reset any default margins */
+}
+
+.edu-box {
+    box-sizing: border-box;
+    padding: 10px;
+    background: linear-gradient(135deg, #003459, #005f7f);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#edu-img{
+	width: 100px;
+}
+
+#edu-link{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#edu-link:hover{
+	color: #007ea7;
+    transition: 0.4s ease;
+    transform: scale(1.4);
+}
+
+
+
+
+/*GAMES*/
+section.games {
+    background: linear-gradient(135deg, #003459, #005f7f);
+    color: #ffffff;
+}
+
+.games {
+    text-align: center; /* Center the heading */
+}
+
+.game-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Adjust spacing between boxes */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.game-box {
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, #00263b, #00496a);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#game-link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#game-link:hover{
+    color: #007ea7;
+    transition: 0.4s ease;
+    transform: scale(1.4);
+}
+
+
+
+
+/*PROJECTS*/
+.projects {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 20px; /* Adjust spacing between boxes */
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #00263b, #00496a); /* Consistent gradient */
+    text-align: center;
+    padding-bottom: 60px; /* Add padding to ensure extra spacing inside */
+}
+
+.projects h1 {
+    margin: 0; /* Reset any default margins */
+}
+
+.project-box {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center; /* Center the text */
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #003459, #005f7f);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#projects-img{
+	width: 650px;
+	border-radius: 10px;
+}
+
+
+
+
+/*CONTACT*/
+footer.contact {
+    background: linear-gradient(135deg, #003459, #005f7f); /* Ensure footer overlaps fully */
+    color: #ffffff;
+    margin: 0; /* Remove any margins creating gaps */
+    padding: 50px 20px; /* Add padding to footer content */
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.cont-container {
+    display: grid;
+    grid-template-columns: auto auto; /* Adjust columns to fit content */
+    gap: 10px; /* Reduce the gap between columns */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    text-align: center;
+}
+
+.cont-image img {
+    width: 280px;
+    border-radius: 100%;
+    margin-right: 10px; /* Reduce margin on the right */
+}
+
+.cont-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align text vertically */
+    margin-left: 10px; /* Reduce margin on the left */
+}
+
+#cont-img {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle; /* Align image with the text */
+}
+
+#copyText:hover{
+	color: #007ea7;
+	transition: 0.4s ease;
+    transform: scale(1.05);
+}
+
+#cont-link {
+    display: inline-flex; /* Inline-flex to keep image and text aligned */
+    align-items: center; /* Align items vertically */
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#cont-link-p:hover {
+    color: #007ea7;
+    transition: 0.4s ease;
+    transform: scale(1.2);
+}
+
+
+
+
+/*ALL*/
+.edu-box:hover, .project-box:hover, .game-box:hover {
+    transform: translateY(-10px);
+}
